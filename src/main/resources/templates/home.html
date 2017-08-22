@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="/headering" th:remove="tag"></head>
+<body>
+<div class="wr-home-page">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3"><a class="logo" href=""><img  src="" alt=""/></a></div>
+        <div class="col-xs-3 col-xs-offset-6"><a class="btn-warning btn-premium" href="">Premium Newsletter</a></div>
+    </div>
+
+<table class="table-currency table table-striped">
+    <tr>
+        <th class="title-txt"></th>
+        <th class="title-txt">OANDA</th>
+        <th class="title-txt">Dukascopy</th>
+        <th class="title-txt">Saxobank</th>
+        <th class="title-txt">Forex Factroy</th>
+        <th class="title-txt">MyFxBook</th>
+        <th class="title-txt">Average</th>
+    </tr>
+
+    <tr th:each="currency : ${currency}">
+        <td>
+            <span class="title-txt" th:text="${currency.name}"></span>
+        </td>
+        <td>
+            <span class="data-txt" th:text="${currency.currencieOanda.buyers}"></span> / <span class="data-txt"
+                th:text="${currency.currencieOanda.sellers}"></span>
+        </td>
+        <td>
+            <span class="data-txt" th:text="${currency.currencieDukascopy?.buyers}"></span> / <span class="data-txt"
+                th:text="${currency.currencieDukascopy?.sellers}"></span>
+        </td>
+        <td>
+            <span class="data-txt" th:text="${currency.currencieSaxoBank?.buyers}"></span> / <span class="data-txt"
+                th:text="${currency.currencieSaxoBank?.sellers}"></span>
+        </td>
+        <td>
+            <span class="data-txt" th:text="${currency.currencieForexFactory?.buyers}"></span> / <span class="data-txt"
+                th:text="${currency.currencieForexFactory?.sellers}"></span>
+        </td>
+        <td>
+            <span class="data-txt" th:text="${currency.currencieMyFxBook?.buyers}"></span> / <span class="data-txt"
+                th:text="${currency.currencieMyFxBook?.sellers}"></span>
+        </td>
+        <td>
+            <span class="data-txt" th:text="${currency.buyers}"></span> / <span class="data-txt" th:text="${currency.sellers}"></span>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

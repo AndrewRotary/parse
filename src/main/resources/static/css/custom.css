@@ -1,0 +1,55 @@
+.wr-home-page{
+    background: #000;
+    padding: 80px 0;
+}
+.table-currency{
+    margin-top: 40px;
+    color: #fff;
+}
+.table-currency tr{
+    border: 1px solid #7e7e7e;
+}
+.table-currency td, .table-currency th{
+    text-align: center;
+    border: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3e3c3d+0,242223+100 */
+    background: #3e3c3d; /* Old browsers */
+    background: -moz-linear-gradient(top, #3e3c3d 0%, #242223 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3e3c3d 0%,#242223 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3e3c3d 0%,#242223 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3c3d', endColorstr='#242223',GradientType=0 ); /* IE6-9 */
+}
+.title-txt{
+    color: #b6b4b5;
+}
+
+.data-txt{
+    color: #fd9a2b;
+}
+.btn-premium{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 9px;
+    background-color: #fef200;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+}
+.btn-premium:hover{
+    background-color: #fef200;
+    text-decoration: none;
+}
+
+.logo{
+    width: 262px;
+    height: 47px;
+    display: block;
+    text-align: center;
+    background: #ffd541;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    background: #ffd541;
+}
