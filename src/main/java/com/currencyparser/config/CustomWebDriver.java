@@ -1,5 +1,6 @@
 package com.currencyparser.config;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,7 +16,7 @@ public class CustomWebDriver {
     public static WebDriver webDriver;
 
     public CustomWebDriver() {
-        System.setProperty("webdriver.chrome.driver", CHROMEDRIVER_LOCATION);
+        ChromeDriverManager.getInstance().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("window-size=1900x3000");
