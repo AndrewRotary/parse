@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.currencyparser</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>parser</artifactId>
+    <version>1</version>
     <packaging>jar</packaging>
 
-    <name>demo</name>
+    <name>parser</name>
     <description>get currency from web-sites and parse it</description>
 
     <parent>
