@@ -16,7 +16,8 @@ public class CustomWebDriver {
     public static WebDriver webDriver;
 
     public CustomWebDriver() {
-        System.setProperty("webdriver.chrome.driver", "GOOGLE_CHROME_BIN");
+
+        System.setProperty("webdriver.chrome.driver", System.getenv("GOOGLE_CHROME_BIN"));
         ChromeDriverManager.getInstance().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
