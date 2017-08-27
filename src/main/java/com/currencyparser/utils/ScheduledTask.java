@@ -24,7 +24,7 @@ public class ScheduledTask {
     @Autowired
     private CurrencyService currencyService;
 
-    @Scheduled(cron = "0 0/10 * * * ?")
+    @Scheduled(cron = "0 0/30 * * * ?")
     public void reportCurrentTime() throws InterruptedException, IOException {
         System.out.println("data deleted = " + LocalDateTime.now());
         currencyService.saveCurrenciesFormWebSites();
