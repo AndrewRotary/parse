@@ -53,3 +53,15 @@
     height: 100%;
     background: #ffd541;
 }
+.alert_buy{
+    background: #00ff0e;
+}
+.alert_sell{
+    background: #ff2a00;
+}
+.table-currency td{
+    padding: 0;
+}
+.table-currency td div{
+ padding: 8px;
+}

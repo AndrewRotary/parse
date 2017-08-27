@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * Use one custom webDriver
  */
 public class CustomWebDriver {
-    private static final String CHROMEDRIVER_LOCATION = "static/chromedriver.exe";
+    private static final String CHROMEDRIVER_LOCATION = "E:\\IT\\currencyParser\\src\\main\\resources\\static\\chromedriver.exe";
 
 
     public static WebDriver webDriver;

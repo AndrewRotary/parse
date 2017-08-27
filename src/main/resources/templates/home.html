@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:include="/headering" th:remove="tag"></head>
+<head xmlns:th="http://www.w3.org/1999/xhtml">
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{/css/custom.css}"/>
+    <script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
 <body>
 <div class="wr-home-page">
 <div class="container">
@@ -24,9 +31,11 @@
         <td>
             <span class="title-txt" th:text="${currency.name}"></span>
         </td>
-        <td>
+        <td th:classappend="${currency.currencieOanda.buyers} > 70 ? alert_buy : asd">
+            <div th:classappend="${currency.currencieOanda.sellers} > 70 ? alert_sell : asdasd">
             <span class="data-txt" th:text="${currency.currencieOanda.buyers}"></span> / <span class="data-txt"
                 th:text="${currency.currencieOanda.sellers}"></span>
+            </div>
         </td>
         <td>
             <span class="data-txt" th:text="${currency.currencieDukascopy?.buyers}"></span> / <span class="data-txt"
