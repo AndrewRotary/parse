@@ -10,55 +10,80 @@
 </head>
 <body>
 <div class="wr-home-page">
-<div class="container">
-    <div class="row">
-        <div class="col-xs-3"><a class="logo" href=""><img  src="" alt=""/></a></div>
-        <div class="col-xs-3 col-xs-offset-6"><a class="btn-warning btn-premium" href="">Premium Newsletter</a></div>
-    </div>
-
-<table class="table-currency table table-striped">
-    <tr>
-        <th class="title-txt"></th>
-        <th class="title-txt">OANDA</th>
-        <th class="title-txt">Dukascopy</th>
-        <th class="title-txt">Saxobank</th>
-        <th class="title-txt">Forex Factroy</th>
-        <th class="title-txt">MyFxBook</th>
-        <th class="title-txt">Average</th>
-    </tr>
-
-    <tr th:each="currency : ${currency}">
-        <td>
-            <span class="title-txt" th:text="${currency.name}"></span>
-        </td>
-        <td th:classappend="${currency.currencieOanda.buyers} > 70 ? alert_buy : asd">
-            <div th:classappend="${currency.currencieOanda.sellers} > 70 ? alert_sell : asdasd">
-            <span class="data-txt" th:text="${currency.currencieOanda.buyers}"></span> / <span class="data-txt"
-                th:text="${currency.currencieOanda.sellers}"></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3"><a class="logo" href=""><img src="" alt=""/></a></div>
+            <div class="col-xs-3 col-xs-offset-6"><a class="btn-warning btn-premium" href="">Premium Newsletter</a>
             </div>
-        </td>
-        <td>
-            <span class="data-txt" th:text="${currency.currencieDukascopy?.buyers}"></span> / <span class="data-txt"
-                th:text="${currency.currencieDukascopy?.sellers}"></span>
-        </td>
-        <td>
-            <span class="data-txt" th:text="${currency.currencieSaxoBank?.buyers}"></span> / <span class="data-txt"
-                th:text="${currency.currencieSaxoBank?.sellers}"></span>
-        </td>
-        <td>
-            <span class="data-txt" th:text="${currency.currencieForexFactory?.buyers}"></span> / <span class="data-txt"
-                th:text="${currency.currencieForexFactory?.sellers}"></span>
-        </td>
-        <td>
-            <span class="data-txt" th:text="${currency.currencieMyFxBook?.buyers}"></span> / <span class="data-txt"
-                th:text="${currency.currencieMyFxBook?.sellers}"></span>
-        </td>
-        <td>
-            <span class="data-txt" th:text="${currency.buyers}"></span> / <span class="data-txt" th:text="${currency.sellers}"></span>
-        </td>
-    </tr>
-</table>
-</div>
+        </div>
+
+        <table class="table-currency table table-striped">
+            <tr>
+                <th class="title-txt"></th>
+                <th class="title-txt">OANDA</th>
+                <th class="title-txt">Dukascopy</th>
+                <th class="title-txt">Saxobank</th>
+                <th class="title-txt">Forex Factroy</th>
+                <th class="title-txt">MyFxBook</th>
+                <th class="title-txt">Average</th>
+            </tr>
+
+            <tr th:each="currency : ${currency}">
+                <td>
+                    <span class="title-txt" th:text="${currency.name}"></span>
+                </td>
+                <td>
+                    <div th:classappend="${currency.currencieOanda?.buyers != null and currency.currencieOanda?.buyers > 70} ? alert_buy : cell">
+                        <div th:classappend="${currency.currencieOanda?.sellers != null and currency.currencieOanda?.sellers > 70 } ? alert_sell : cell">
+                            <span class="data-txt" th:text="${currency.currencieOanda.buyers}"></span> / <span
+                                class="data-txt"
+                                th:text="${currency.currencieOanda.sellers}"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div th:classappend="${currency.currencieDukascopy?.buyers != null and currency.currencieDukascopy?.buyers > 70} ? alert_buy : cell">
+                        <div th:classappend="${currency.currencieDukascopy?.sellers != null and currency.currencieDukascopy?.sellers > 70 } ? alert_sell : cell">
+                            <span class="data-txt" th:text="${currency.currencieDukascopy?.buyers}"></span> /
+                            <span class="data-txt" th:text="${currency.currencieDukascopy?.sellers}"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div th:classappend="${currency.currencieSaxoBank?.buyers != null and currency.currencieSaxoBank?.buyers > 70} ? alert_buy : cell">
+                        <div th:classappend="${currency.currencieSaxoBank?.sellers != null and currency.currencieSaxoBank?.sellers > 70 } ? alert_sell : cell">
+                            <span class="data-txt" th:text="${currency.currencieSaxoBank?.buyers}"></span> /
+                            <span class="data-txt" th:text="${currency.currencieSaxoBank?.sellers}"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div th:classappend="${currency.currencieForexFactory?.buyers != null and currency.currencieForexFactory?.buyers > 70} ? alert_buy : cell">
+                        <div th:classappend="${currency.currencieForexFactory?.sellers != null and currency.currencieForexFactory?.sellers > 70 } ? alert_sell : cell">
+                            <span class="data-txt" th:text="${currency.currencieForexFactory?.buyers}"></span> /
+                            <span class="data-txt" th:text="${currency.currencieForexFactory?.sellers}"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div th:classappend="${currency.currencieMyFxBook?.buyers != null and currency.currencieMyFxBook?.buyers > 70} ? alert_buy : cell">
+                        <div th:classappend="${currency.currencieMyFxBook?.sellers != null and currency.currencieMyFxBook?.sellers > 70 } ? alert_sell : cell">
+                            <span class="data-txt" th:text="${currency.currencieMyFxBook?.buyers}"></span> /
+                            <span class="data-txt" th:text="${currency.currencieMyFxBook?.sellers}"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div th:classappend="${currency.buyers != null and currency.buyers > 70} ? alert_buy : cell">
+                        <div th:classappend="${currency.sellers != null and currency.sellers > 70 } ? alert_sell : cell">
+                            <span class="data-txt" th:text="${currency.buyers}"></span> /
+                            <span class="data-txt" th:text="${currency.sellers}"></span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
 </body>
 </html>

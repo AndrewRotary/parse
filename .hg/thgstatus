@@ -3,5 +3,8 @@ m.idea
 a.idea/libraries
 msrc/main/java/com/currencyparser/config
 msrc/main/java/com/currencyparser/utils
+msrc/main/resources/static/css
+msrc/main/resources/templates
 mtarget/classes
 rtarget/classes/com/currencyparser/pojo
+mtarget/classes/templates

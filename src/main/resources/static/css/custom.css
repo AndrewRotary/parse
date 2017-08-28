@@ -1,32 +1,39 @@
-.wr-home-page{
+.wr-home-page {
     background: #000;
     padding: 80px 0;
 }
-.table-currency{
+
+.table-currency {
     margin-top: 40px;
     color: #fff;
 }
-.table-currency tr{
+
+.table-currency tr {
     border: 1px solid #7e7e7e;
 }
-.table-currency td, .table-currency th{
+
+.table-currency td, .table-currency th {
     text-align: center;
     border: none;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3e3c3d+0,242223+100 */
     background: #3e3c3d; /* Old browsers */
     background: -moz-linear-gradient(top, #3e3c3d 0%, #242223 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #3e3c3d 0%,#242223 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #3e3c3d 0%,#242223 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3c3d', endColorstr='#242223',GradientType=0 ); /* IE6-9 */
+    background: -webkit-linear-gradient(top, #3e3c3d 0%, #242223 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3e3c3d 0%, #242223 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#242223', GradientType=0); /* IE6-9 */
 }
-.title-txt{
+
+.title-txt {
     color: #b6b4b5;
 }
 
-.data-txt{
+.data-txt {
     color: #fd9a2b;
+    padding: 15px 0px;
+    display: inline-block;
 }
-.btn-premium{
+
+.btn-premium {
     width: 100%;
     display: block;
     padding: 10px;
@@ -36,32 +43,77 @@
     font-size: 20px;
     text-align: center;
 }
-.btn-premium:hover{
+
+.btn-premium:hover {
     background-color: #fef200;
     text-decoration: none;
 }
 
-.logo{
+.logo {
     width: 262px;
     height: 47px;
     display: block;
     text-align: center;
     background: #ffd541;
 }
-.logo img{
+
+.logo img {
     width: 100%;
     height: 100%;
     background: #ffd541;
 }
-.alert_buy{
-    background: #00ff0e;
+
+.alert_buy {
+    background: linear-gradient(174deg, #3c3a3b, #1cc113);
+    background-size: 400% 400%;
+    -webkit-animation: buy-animation 3s ease infinite;
+    -moz-animation: buy-animation 3s ease infinite;
+    animation: buy-animation 3s ease infinite;
+    color: #fff;
 }
-.alert_sell{
-    background: #ff2a00;
+
+.alert_sell {
+    background: linear-gradient(174deg, #3c3a3b, #f32605);
+    background-size: 400% 400%;
+    color: #fff;
+    -webkit-animation: sell-animation 3s ease infinite;
+    -moz-animation: sell-animation 3s ease infinite;
+    animation: sell-animation 3s ease infinite;
 }
-.table-currency td{
-    padding: 0;
+
+.table-currency td {
+    padding: 0 !important;
 }
-.table-currency td div{
- padding: 8px;
+
+@-webkit-keyframes buy-animation {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
 }
+@-moz-keyframes buy-animation {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@keyframes buy-animation {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+
+@-webkit-keyframes sell-animation {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@-moz-keyframes sell-animation {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@keyframes sell-animation {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+

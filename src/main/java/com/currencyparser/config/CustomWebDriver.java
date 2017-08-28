@@ -20,7 +20,7 @@ public class CustomWebDriver {
 //        System.setProperty("webdriver.chrome.driver","/app/.apt/usr/bin/google-chrome");
         ChromeDriverManager.getInstance().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/app/.apt/usr/bin/google-chrome");
+//        options.setBinary("/app/.apt/usr/bin/google-chrome");
         options.addArguments("headless");
         options.addArguments("window-size=1900x3000");
         webDriver = new ChromeDriver(options);
