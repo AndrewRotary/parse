@@ -6,6 +6,7 @@ import com.currencyparser.service.CurrencyService;
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class ParserController {
     private CurrencyService currencyService;
 
 
-    @GetMapping("/saxo")
+    @RequestMapping("/saxo")
     public void getCurrencyFormSaxoWeb() throws IOException, InterruptedException {
          currencyService.saveCurrenciesFormWebSites();
     }

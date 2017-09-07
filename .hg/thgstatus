@@ -1,10 +1,12 @@
-m
+r
 m.idea
 a.idea/libraries
 msrc/main/java/com/currencyparser/config
-msrc/main/java/com/currencyparser/utils
+msrc/main/java/com/currencyparser/controller
+msrc/main/resources
 msrc/main/resources/static/css
 msrc/main/resources/templates
 mtarget/classes
+mtarget/classes/com/currencyparser/controller
 rtarget/classes/com/currencyparser/pojo
 mtarget/classes/templates

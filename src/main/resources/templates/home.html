@@ -30,7 +30,7 @@
 
             <tr th:each="currency : ${currency}">
                 <td>
-                    <span class="title-txt" th:text="${currency.name}"></span>
+                    <div class="title-txt" th:text="${currency.name}"></div>
                 </td>
                 <td>
                     <div th:classappend="${currency.currencieOanda?.buyers != null and currency.currencieOanda?.buyers > 70} ? alert_buy : cell">
