@@ -1,6 +1,6 @@
 FROM java:8
 VOLUME /tmp
-ADD target/demo-prod-0.jar demo-prod-0.jar
-WORKDIR /apps/spring_app
+ADD target/demo-prod-0.jar app.jar
 EXPOSE 8080
-CMD ["java", "-jar", "demo-prod-0.jar"]
+RUN bash -c 'touch /app.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
