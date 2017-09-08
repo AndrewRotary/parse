@@ -16,7 +16,7 @@ public class CustomWebDriver {
 
     public CustomWebDriver() {
 
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.home") + "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver","/etc/alternatives/google-chrome");
         ChromeDriverManager.getInstance().setup();
         ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/local/bin/chromedriver");
