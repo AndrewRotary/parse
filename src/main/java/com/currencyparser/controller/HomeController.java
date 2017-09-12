@@ -20,7 +20,7 @@ public class HomeController {
     @Autowired
     private CurrencyService currencyService;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String home(Model model) throws IOException, InterruptedException {
         List<CommonCurrency> commonCurrencyList = currencyService.commonResultForView();
         model.addAttribute("currency", commonCurrencyList);
