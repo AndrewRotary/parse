@@ -7,6 +7,6 @@ msrc/main/resources
 msrc/main/resources/static/css
 msrc/main/resources/templates
 mtarget/classes
-rtarget/classes/com/currencyparser/controller
+mtarget/classes/com/currencyparser/controller
 rtarget/classes/com/currencyparser/pojo
 mtarget/classes/templates
