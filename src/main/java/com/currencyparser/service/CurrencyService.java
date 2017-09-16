@@ -212,6 +212,7 @@ public class CurrencyService {
         System.out.println("Get from:" + FOREX_FACTORY);
         WebDriver driver = customWebDriver.getWebDriver();
         driver.get(FOREX_FACTORY);
+        System.out.println("page opened");
         List<Currency> currencyList = new ArrayList<>();
         Boolean waitUntill = false;
         WebElement widgetWrapper = driver.findElement(By.id("flexBox_flex_trades/positions_tradesPositionsCopy1"));
